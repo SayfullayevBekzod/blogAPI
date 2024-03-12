@@ -2,7 +2,7 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.fields import CharField
 from rest_framework.serializers import ModelSerializer, ListSerializer
 
-from apps.api.models import User, Post, Comment, Like
+from apps.blog.models import User, Post, Comment, Like
 
 
 class UserCreateSerializer(ModelSerializer):
