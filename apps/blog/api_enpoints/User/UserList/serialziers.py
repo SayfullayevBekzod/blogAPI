@@ -6,4 +6,4 @@ from apps.blog.models import User
 class UserListSerializer(ModelSerializer):
     class Meta:
         model = User
-        fields = ('username', 'birthday', 'bio')
+        fields = ('username', 'bio')

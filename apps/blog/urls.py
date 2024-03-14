@@ -2,6 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
 
+from apps.blog.api_enpoints.Comment import CommentListView
 from apps.blog.api_enpoints.Like import LikeListView, LikeCreateView, LikeRetrieveView, LikeUpdateView, LikeDestroyView
 from apps.blog.api_enpoints.Post import PostListView, PostCreateView, PostRetrieveView, PostUpdateView, PostDestroyView
 from apps.blog.api_enpoints.User import UserDestroyView, UserUpdateView, UserRetrieveView, UserUpdatePasswordView
@@ -34,5 +35,6 @@ urlpatterns = [
     path('post/<pk>/destroy/', PostDestroyView.as_view()),
     path('post/<pk>/update/', PostUpdateView.as_view()),
     path('post/<pk>/retrieve/', PostRetrieveView.as_view()),
+    path('comment/', CommentListView.as_view()),
 
 ]
